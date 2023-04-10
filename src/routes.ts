@@ -1,5 +1,6 @@
 import Auth from "./pages/Auth";
-import { LOGIN_ROUTE, REGISTER_ROUTE } from "./utils/consts";
+import Order from "./pages/Order";
+import { LOGIN_ROUTE, ORDERS_ROUTE, REGISTER_ROUTE } from "./utils/consts";
 
 
 export const publicRoutes = [
@@ -12,3 +13,10 @@ export const publicRoutes = [
         path: REGISTER_ROUTE
     }
 ]
+
+export const authRoutes = [
+    {
+      Component: Order,
+      path: ORDERS_ROUTE
+    }
+  ]
