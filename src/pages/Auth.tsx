@@ -5,13 +5,14 @@ import Checkbox from '@mui/material/Checkbox';
 import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Container from '@mui/material/Container'
-import { NavLink, useLocation } from 'react-router-dom'
-import { LOGIN_ROUTE, REGISTER_ROUTE } from '../utils/consts'
+import { NavLink, useLocation, useNavigate } from 'react-router-dom'
+import { LOGIN_ROUTE, PRODUCTS_ROUTE, REGISTER_ROUTE } from '../utils/consts'
 import { IconButton, InputAdornment, InputLabel, OutlinedInput } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material'
 
 const Auth = () => {
 
+  const navigate = useNavigate()
   const location = useLocation()
   const isLogin = location.pathname === LOGIN_ROUTE
   
@@ -23,7 +24,10 @@ const Auth = () => {
 
   const sign = (event: React.SyntheticEvent) => {
     event.preventDefault()
-    alert('yo')
+    console.log(username, password);
+    if(isLogin) {
+      navigate(PRODUCTS_ROUTE)
+    }
   }
 
     return (

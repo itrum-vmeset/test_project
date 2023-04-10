@@ -1,10 +1,10 @@
 import React from 'react'
 import { withLayout } from '../components/Layout'
 
-function Order() {
+function Products() {
   return (
-    <div>Orders Page</div>
+    <div>Products</div>
   )
 }
 
-export default withLayout(Order)
+export default withLayout(Products)

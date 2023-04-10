@@ -1,7 +1,7 @@
 import React from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { authRoutes, publicRoutes } from '../routes'
-import { LOGIN_ROUTE, ORDERS_ROUTE } from '../utils/consts'
+import { LOGIN_ROUTE, ORDERS_ROUTE, PRODUCTS_ROUTE } from '../utils/consts'
 
 function AppRouter() {
 
@@ -20,7 +20,7 @@ function AppRouter() {
       )}
       <Route path='*' element={
         isAuth 
-        ? <Navigate to={ORDERS_ROUTE} />
+        ? <Navigate to={PRODUCTS_ROUTE} />
         : <Navigate to={LOGIN_ROUTE} />} 
       />
     </Routes>
