@@ -1,7 +1,7 @@
 import { GridColDef, GridValueGetterParams } from '@mui/x-data-grid';
 import React from 'react'
+import CustomTable from '../components/UI/customTable/CustomTable'
 import { withLayout } from '../components/layout/Layout'
-import Table from '../components/UI/table/Table'
 
 const columns: GridColDef[] = [
   { field: 'id', headerName: 'ID', width: 70 },
@@ -36,13 +36,13 @@ const rows = [
   { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
 ];
 
-function Products() {
+function Orders() {
   return (
     <div>
-      <h1>Products</h1>
-      <Table columns={columns} rows={rows} />
+      <h1>Orders Page</h1>
+      <CustomTable rows={rows} columns={columns} />
     </div>
   )
 }
 
-export default withLayout(Products)
+export default withLayout(Orders)

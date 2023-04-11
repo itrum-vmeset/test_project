@@ -1,5 +1,5 @@
 import Auth from "./pages/Auth";
-import Order from "./pages/Order";
+import Orders from "./pages/Orders";
 import Products from "./pages/Products";
 import { LOGIN_ROUTE, ORDERS_ROUTE, PRODUCTS_ROUTE, REGISTER_ROUTE } from "./utils/consts";
 
@@ -17,7 +17,7 @@ export const publicRoutes = [
 
 export const authRoutes = [
     {
-        Component: Order,
+        Component: Orders,
         path: ORDERS_ROUTE
     },
     {

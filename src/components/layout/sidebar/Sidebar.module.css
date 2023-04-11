@@ -1,4 +1,8 @@
-.ListItemButton.Mui {
+/* .ListItemButton-selected {
     color: red;
     background-color: red;
+} */
+
+.ListItemText span{
+    font-size: 14px;
 }
