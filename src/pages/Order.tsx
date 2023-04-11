@@ -1,5 +1,5 @@
 import React from 'react'
-import { withLayout } from '../components/Layout'
+import { withLayout } from '../components/layout/Layout'
 
 function Order() {
   return (
