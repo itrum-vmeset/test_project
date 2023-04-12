@@ -1,0 +1,14 @@
+.sidebar {
+  color: var(--black);
+}
+
+.ListItemText span {
+  font-size: 14px;
+}
+
+.selectedItem{
+  background: var(--primary);
+  border: 1px solid var(--primary-border);
+  border-radius: 8px;
+  color: var(--white);
+}

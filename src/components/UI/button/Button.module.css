@@ -1,0 +1,23 @@
+.button {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 8px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+}
+
+.filled {
+    background-color: var(--primary);
+    color: var(--white);
+    border: 1px solid var(--primary-border);
+}
+
+.transparent {
+    background: none;
+    color: var(--black);
+    border: 1px solid var(--transparent-border);
+}

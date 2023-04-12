@@ -1,0 +1,28 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+
+  color: var(--black);
+  background: #F5F6F8;
+  
+  /* font-family: 'Inter', sans-serif; */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+	--black: #434652;
+	--white: white;
+	--primary: #C06ECC;
+  --primary-border: #BD68CA;
+	--transparent-border: #D0D3DA;
+  /* font-family: 'Inter', sans-serif; */
+}
