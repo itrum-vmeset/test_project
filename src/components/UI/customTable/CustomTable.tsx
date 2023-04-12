@@ -3,6 +3,7 @@ import {
   DataGrid,
   gridPageCountSelector,
   gridPageSelector,
+  GridToolbarContainer,
   useGridApiContext,
   useGridSelector,
 } from '@mui/x-data-grid';
@@ -11,6 +12,8 @@ import { Theme, styled } from '@mui/material/styles';
 import Pagination from '@mui/material/Pagination';
 import PaginationItem from '@mui/material/PaginationItem';
 import { CustomTableProps } from './CustomTable.props';
+import { Button } from '../button/Button';
+import styles from './CustomTable.module.css';
 
 function customCheckbox(theme: Theme) {
   return {
@@ -114,10 +117,30 @@ function CustomPagination() {
       count={pageCount}
       // @ts-expect-error
       renderItem={(props2) => <PaginationItem {...props2} disableRipple />}
+      // renderItem={(item) => (
+      //   <PaginationItem
+      //     components={{
+      //       last: (props) => <button {...props}>Last</button>,
+      //       next: (props) => <button {...props}>Next</button>,
+      //       first: (props) => <button {...props}>First</button>,
+      //       previous: (props) => <button {...props}>Previous</button>
+      //     }}
+      //     {...item}
+      //   />
+      // )}
       onChange={(event: React.ChangeEvent<unknown>, value: number) =>
         apiRef.current.setPage(value - 1)
       }
     />
+  );
+}
+
+function CustomToolbar() {
+  return (
+    <GridToolbarContainer>
+      <CustomPagination />
+      <Button apearance='filled' className={styles.addBtn}>Добавить акцию</Button>
+    </GridToolbarContainer>
   );
 }
 
@@ -143,11 +166,14 @@ export default function CustomTable({columns, rows}: CustomTableProps) {
             onPaginationModelChange={setPaginationModel}
             pageSizeOptions={[PAGE_SIZE]}
             slots={{
-                pagination: CustomPagination,
+                // pagination: CustomPagination,
+                toolbar: CustomToolbar
             }}
             rows={rows}
             columns={columns}
-            sx={{'flex-direction': 'column-reverse'}}
+            hideFooterPagination
+            // sx={{'flex-direction': 'column-reverse'}}
+
         />
     </div>
   );

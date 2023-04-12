@@ -1,7 +1,8 @@
 import Auth from "./pages/Auth";
+import Categories from "./pages/Categories";
 import Orders from "./pages/Orders";
 import Products from "./pages/Products";
-import { LOGIN_ROUTE, ORDERS_ROUTE, PRODUCTS_ROUTE, REGISTER_ROUTE } from "./utils/consts";
+import { CATEGORIES_ROUTE, LOGIN_ROUTE, ORDERS_ROUTE, PRODUCTS_ROUTE, REGISTER_ROUTE } from "./utils/consts";
 
 
 export const publicRoutes = [
@@ -23,5 +24,9 @@ export const authRoutes = [
     {
         Component: Products,
         path: PRODUCTS_ROUTE
+    },
+    {
+        Component: Categories,
+        path: CATEGORIES_ROUTE
     }
 ]
